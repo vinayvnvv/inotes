@@ -1,20 +1,41 @@
 import * as React from 'react';
 import './App.css';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import 'typeface-roboto';
+import { Theme, Auth } from './services';
+import { Notes } from './modules/notes';
+import { Login } from './modules/login';
 
-import logo from './logo.svg';
 
-class App extends React.Component {
+interface IState {
+  isLogin: boolean;
+}
+
+class App extends React.Component<any, IState> {
+  state: IState;
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      isLogin: !Auth.isAuth()
+    }
+  }
+
+  onLogin = (status: boolean) => {
+    console.log('on login');
+    if(status) this.setState({
+      isLogin: true
+    })
+  }
+
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, get edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <MuiThemeProvider theme={Theme.getCreateMuiTheme}>
+        {this.state.isLogin ? (
+            <Notes />
+          ) : (
+            <Login onLogin={this.onLogin}/>
+        )}
+      </MuiThemeProvider>
     );
   }
 }

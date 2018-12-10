@@ -1,0 +1,31 @@
+.app-header {
+  background-color: #fff;
+  display: flex;
+  align-items: center; }
+  .app-header ._menu {
+    margin: 0 13px; }
+  .app-header ._logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    color: #666; }
+    @media screen and (max-width: 960px) {
+      .app-header ._logo {
+        color: #fff; } }
+  .app-header > ._left {
+    display: flex;
+    align-items: center; }
+  .app-header > ._right {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end; }
+  @media screen and (min-width: 961px) {
+    .app-header {
+      border-bottom: 1px solid #d9d9d981; } }
+  @media screen and (max-width: 960px) {
+    .app-header {
+      background-color: #5393ff;
+      color: #fff; }
+      .app-header ._ic {
+        color: #fff; } }

@@ -1,0 +1,25 @@
+@import './util/mixins.sass'
+.App
+	display: block
+	&>.app-header
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: $header-height
+		z-index: 3
+	&>.app-container
+		&>.app-sidenav
+			position: fixed
+			height: calc(100% - #{$header-height})
+			top: $header-height
+			left: 0px
+			width: $sidenav-width
+			overflow-y: auto
+			+media-only-mobile
+				margin-left: -$sidenav-width
+		&>.app-content
+			margin-left: $sidenav-width
+			margin-top: $header-height
+			+media-only-mobile
+				margin-left: 0px

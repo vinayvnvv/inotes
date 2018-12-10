@@ -1,0 +1,18 @@
+.NotesList > ._list {
+  margin: 0 auto; }
+  .NotesList > ._list > ._item {
+    width: 240px;
+    z-index: 0;
+    min-height: 100px;
+    position: absolute;
+    transition: 0.334s all;
+    display: flex; }
+    .NotesList > ._list > ._item > ._itm-inner {
+      margin: 7px;
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      width: 100%;
+      background-color: #fefefe;
+      transition: 0.123s all; }
+      .NotesList > ._list > ._item > ._itm-inner:hover {
+        box-shadow: 0px 1px 1px 1px #d9d9d9, 0px -1px 1px 1px #d9d9d988, 0px 0px 12px -4px #d9d9d993; }

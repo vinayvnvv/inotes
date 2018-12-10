@@ -1,0 +1,20 @@
+.app-sidenav {
+  padding-top: 50px; }
+  .app-sidenav > .nav-items > ._item {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0px 11px 0px 21px;
+    border-radius: 0 42px 42px 0px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    color: #5f6368; }
+    .app-sidenav > .nav-items > ._item > ._ttl {
+      margin-left: 21px; }
+    .app-sidenav > .nav-items > ._item.active {
+      background-color: rgba(83, 147, 255, 0.17);
+      color: #5393ff;
+      pointer-events: none; }
+    .app-sidenav > .nav-items > ._item:hover {
+      background-color: #d9d9d943; }

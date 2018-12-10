@@ -1,0 +1,30 @@
+@import './../../../../sass/util/vars.sass'
+@import './../../../../sass/util/mixins.sass'
+.app-header
+	background-color: #fff
+	display: flex
+	align-items: center
+	& ._menu
+		margin: 0 13px
+	& ._logo
+		font-size: 22px
+		font-weight: 700
+		letter-spacing: -0.045em
+		color: #666
+		+media-only-mobile
+			color: $primary-invert
+	&>._left
+		display: flex
+		align-items: center
+	&>._right
+		display: flex
+		align-items: center
+		flex-grow: 1
+		justify-content: flex-end
+	+media-only-desktop
+		border-bottom: 1px solid #d9d9d981
+	+media-only-mobile
+		background-color: $primary
+		color: $primary-invert
+		& ._ic
+			color: $primary-invert
